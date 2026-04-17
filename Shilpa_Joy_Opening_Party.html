@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shilpa Joy — GIDF Opening Party</title>
-    <style>
-        /* ── Warm editorial fonts ── */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700&family=Hind:wght@300;400;500;600;700&display=swap');
-
-        * {
+    <style>        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         :root {
-            --color-primary: #B5421A;
-            --color-accent: #C4841A;
-            --color-dark: #1C1108;
-            --color-light: #F7F0E6;
-            --color-text: #1C1108;
-            --color-border: #E0D5C4;
+            --color-primary: #DC143C;
+            --color-accent: #00FFC8;
+            --color-dark: #1A1A1A;
+            --color-light: #F9F7F4;
+            --color-text: #2D2D2D;
+            --color-border: #E8E3DC;
 
             --space-xs: 8px;
             --space-sm: 12px;
@@ -32,7 +28,7 @@
         }
 
         body {
-            font-family: 'Hind', system-ui, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
             color: var(--color-text);
             background: var(--color-light);
@@ -55,11 +51,9 @@
         }
 
         .performer-name {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
             font-size: 48px;
             font-weight: 700;
-            letter-spacing: -0.015em;
+            letter-spacing: -0.02em;
             margin-bottom: var(--space-md);
         }
 
@@ -67,7 +61,7 @@
             display: flex;
             gap: var(--space-2xl);
             font-size: 14px;
-            color: #6B5840;
+            color: #666;
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
@@ -94,8 +88,6 @@
         }
 
         .section-title {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
             font-size: 20px;
             font-weight: 700;
             letter-spacing: -0.01em;
@@ -174,30 +166,24 @@
             font-weight: 600;
         }
 
-        @media (max-width: 680px) {
+        @media (max-width: 600px) {
             body {
-                padding: var(--space-md) var(--space-sm);
+                padding: var(--space-lg);
             }
+
             .container {
-                padding: var(--space-xl) var(--space-lg);
-                box-shadow: none;
-                border-radius: 0;
+                padding: var(--space-lg) var(--space-md);
             }
+
             .performer-name {
-                font-size: 34px;
+                font-size: 36px;
             }
+
             .performance-details {
                 flex-direction: column;
                 gap: var(--space-lg);
             }
-            .show-order-table {
-                font-size: 12px;
-            }
         }
-        @media (max-width: 400px) {
-            .container {
-                padding: var(--space-lg) var(--space-md);
-            }
             .performer-name {
                 font-size: 28px;
             }
@@ -251,7 +237,7 @@
             width: 130px;
             min-width: 130px;
             padding: 10px 12px;
-            color: #6B5840;
+            color: #666;
             font-size: 13px;
         }
         .show-order-header .show-col-style { color: #fff; }
@@ -285,7 +271,7 @@
             background: none;
             border: none;
             padding: 12px 18px;
-            font-family: 'Hind', system-ui, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
             font-size: 13px;
             font-weight: 600;
             color: #aaa;
