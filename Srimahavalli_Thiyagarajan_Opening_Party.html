@@ -53,6 +53,12 @@
         .social { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-sm); font-size: 14px; }
         .hashtag { color: var(--color-primary); font-weight: 600; }
         .footer { margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border); font-size: 13px; color: #888; }
+        .edit-bar { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-bottom: 8px; }
+        .edit-btn { background: none; border: 1px solid var(--color-border); color: #888; font-size: 12px; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-family: inherit; transition: all .15s; }
+        .edit-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+        .edit-btn.send { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+        .edit-btn.send:hover { opacity: .85; }
+        .voiceover[contenteditable="true"] { outline: 2px solid var(--color-primary); background: #fffaf8; border-radius: 2px; }
         @media (max-width: 600px) {
             body { padding: var(--space-lg); }
             .container { padding: var(--space-lg) var(--space-md); }
@@ -106,6 +112,11 @@
                 <div class="info-content" style="font-weight: 600;">Veera Raja Veera</div>
             </div>
             <div class="voiceover">Bharatanatyam artist Srimahavalli Thiyagarajan delves deep into the classical vocabulary of this ancient South Indian form, combining technical precision with emotional depth to communicate the profound spiritual and aesthetic dimensions of the tradition.</div>
+            <div class="edit-bar">
+                <span id="edit-hint" style="font-size:11px;color:#bbb;display:none;">Click in the text above to edit, then send when ready.</span>
+                <button class="edit-btn" id="edit-toggle" onclick="toggleEdit()">✏ Suggest an edit</button>
+                <button class="edit-btn send" id="send-btn" style="display:none;" onclick="sendEdit()">Send suggestion →</button>
+            </div>
             <div class="intro-sublabel">About you</div>
             <div class="bio-block">I am Srimahavalli, from Seychelles and currently a second-year International Business Management student in Ghent, Belgium. I started learning Bharatanatyam at the age of four under Guru Chithra Gopinath from Karaikal, Tamil Nadu, where I was trained in the traditional Tanjore style. This early training built my strong foundation in bharatham.
 
@@ -590,6 +601,23 @@ Alongside classical dance, I am recently also exploring other styles to grow as 
         document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
         btn.classList.add('active');
         document.getElementById(id).classList.add('active');
+    }
+    function toggleEdit() {
+        var v = document.querySelector('.voiceover');
+        var hint = document.getElementById('edit-hint');
+        var sendBtn = document.getElementById('send-btn');
+        var editBtn = document.getElementById('edit-toggle');
+        v.contentEditable = 'true';
+        v.focus();
+        hint.style.display = 'inline';
+        sendBtn.style.display = 'inline';
+        editBtn.style.display = 'none';
+    }
+    function sendEdit() {
+        var text = document.querySelector('.voiceover').innerText;
+        var subject = encodeURIComponent('Introduction edit — Srimahavalli Thiyagarajan');
+        var body = encodeURIComponent('Hi Swapnil,\n\nHere is my suggested edit for the introduction:\n\n' + text + '\n\nThanks');
+        window.location.href = 'mailto:info@shoonyadance.com?subject=' + subject + '&body=' + body;
     }
 </script>
 </body>

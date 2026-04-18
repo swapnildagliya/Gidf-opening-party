@@ -53,6 +53,12 @@
         .social { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-sm); font-size: 14px; }
         .hashtag { color: var(--color-primary); font-weight: 600; }
         .footer { margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border); font-size: 13px; color: #888; }
+        .edit-bar { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-bottom: 8px; }
+        .edit-btn { background: none; border: 1px solid var(--color-border); color: #888; font-size: 12px; padding: 4px 10px; border-radius: 4px; cursor: pointer; font-family: inherit; transition: all .15s; }
+        .edit-btn:hover { border-color: var(--color-primary); color: var(--color-primary); }
+        .edit-btn.send { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+        .edit-btn.send:hover { opacity: .85; }
+        .voiceover[contenteditable="true"] { outline: 2px solid var(--color-primary); background: #fffaf8; border-radius: 2px; }
         @media (max-width: 600px) {
             body { padding: var(--space-lg); }
             .container { padding: var(--space-lg) var(--space-md); }
@@ -105,6 +111,11 @@
                 <div class="info-content" style="font-weight: 600;">Unfolding: Alarippu (Tisra)</div>
             </div>
             <div class="voiceover">Bharatanatyam artist Shilpa Joy, based in the Netherlands, performs "Unfolding: Alarippu" — a piece that translates feeling and meaning into movement, reflecting her lifelong journey to make the internal visible through dance.</div>
+            <div class="edit-bar">
+                <span id="edit-hint" style="font-size:11px;color:#bbb;display:none;">Click in the text above to edit, then send when ready.</span>
+                <button class="edit-btn" id="edit-toggle" onclick="toggleEdit()">✏ Suggest an edit</button>
+                <button class="edit-btn send" id="send-btn" style="display:none;" onclick="sendEdit()">Send suggestion →</button>
+            </div>
             <div class="intro-sublabel">About you</div>
             <div class="bio-block">A Bharatanatyam artist based in the Netherlands, Shilpa Joy began her journey in the art form at the age of four — a practice that has since grown both into a discipline and a deeply personal way of understanding herself and the world.
 
@@ -364,6 +375,23 @@ At the heart of her practice is a desire to make the internal visible: to transl
         document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
         btn.classList.add('active');
         document.getElementById(id).classList.add('active');
+    }
+    function toggleEdit() {
+        var v = document.querySelector('.voiceover');
+        var hint = document.getElementById('edit-hint');
+        var sendBtn = document.getElementById('send-btn');
+        var editBtn = document.getElementById('edit-toggle');
+        v.contentEditable = 'true';
+        v.focus();
+        hint.style.display = 'inline';
+        sendBtn.style.display = 'inline';
+        editBtn.style.display = 'none';
+    }
+    function sendEdit() {
+        var text = document.querySelector('.voiceover').innerText;
+        var subject = encodeURIComponent('Introduction edit — Shilpa Joy');
+        var body = encodeURIComponent('Hi Swapnil,\n\nHere is my suggested edit for the introduction:\n\n' + text + '\n\nThanks');
+        window.location.href = 'mailto:info@shoonyadance.com?subject=' + subject + '&body=' + body;
     }
 </script>
 </body>
