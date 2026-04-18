@@ -4,580 +4,450 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikta Jaamei — GIDF Opening Party</title>
-    <style>        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --color-primary: #DC143C;
-            --color-accent: #00FFC8;
-            --color-dark: #1A1A1A;
-            --color-light: #F9F7F4;
-            --color-text: #2D2D2D;
-            --color-border: #E8E3DC;
-
-            --space-xs: 8px;
-            --space-sm: 12px;
-            --space-md: 16px;
-            --space-lg: 24px;
-            --space-xl: 32px;
-            --space-2xl: 48px;
-            --space-3xl: 64px;
+            --color-primary: #DC143C; --color-accent: #00FFC8; --color-dark: #1A1A1A;
+            --color-light: #F9F7F4; --color-text: #2D2D2D; --color-border: #E8E3DC;
+            --space-xs: 8px; --space-sm: 12px; --space-md: 16px; --space-lg: 24px;
+            --space-xl: 32px; --space-2xl: 48px; --space-3xl: 64px;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: var(--color-text);
-            background: var(--color-light);
-            padding: var(--space-2xl) var(--space-lg);
-        }
-
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #fff;
-            padding: var(--space-3xl) var(--space-2xl);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-        }
-
-        /* Tabs */
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        /* Header */
-        .header {
-            border-bottom: 3px solid var(--color-primary);
-            padding-bottom: var(--space-xl);
-            margin-bottom: var(--space-2xl);
-        }
-
-        .performer-name {
-            font-size: 54px;
-            font-weight: 800;
-            letter-spacing: -0.025em;
-            line-height: 1.05;
-            margin-bottom: var(--space-lg);
-        }
-
-        .performance-details {
-            display: flex;
-            gap: var(--space-xl);
-            font-size: 14px;
-            color: #666;
-            flex-wrap: wrap;
-        }
-
-        .detail-item {
-            flex: 1;
-            min-width: 120px;
-        }
-
-        .detail-label {
-            color: var(--color-primary);
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.07em;
-            margin-bottom: 6px;
-        }
-
-        .detail-value {
-            color: var(--color-text);
-            font-size: 15px;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-
-        /* Section */
-        .section {
-            margin-bottom: var(--space-3xl);
-        }
-
-        .section-title {
-            font-size: 22px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: var(--space-lg);
-            padding-bottom: var(--space-md);
-            border-bottom: 1px solid var(--color-border);
-            color: var(--color-dark);
-        }
-
-        .section-content {
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--color-text);
-        }
-
-        .info-row {
-            display: flex;
-            gap: var(--space-lg);
-            margin-bottom: var(--space-lg);
-        }
-
-        .info-label {
-            min-width: 140px;
-            font-weight: 700;
-            color: var(--color-primary);
-            text-transform: uppercase;
-            font-size: 11px;
-            letter-spacing: 0.07em;
-            padding-top: 2px;
-        }
-
-        .info-content {
-            flex: 1;
-        }
-
-        /* Highlight box */
-        .highlight {
-            background: #FFFBF0;
-            border-left: 4px solid var(--color-accent);
-            padding: var(--space-lg);
-            margin: var(--space-xl) 0;
-            border-radius: 2px;
-        }
-
-        .highlight strong {
-            color: var(--color-primary);
-        }
-
-        /* Voiceover */
-        .voiceover {
-            background: #F0F8FF;
-            padding: var(--space-lg);
-            border-radius: 2px;
-            margin: var(--space-xl) 0;
-            font-style: italic;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        .footer {
-            margin-top: var(--space-3xl);
-            padding-top: var(--space-xl);
-            border-top: 1px solid var(--color-border);
-            font-size: 13px;
-            color: #888;
-        }
-
-        .social {
-            display: flex;
-            gap: var(--space-md);
-            margin-top: var(--space-lg);
-            font-size: 14px;
-        }
-
-        .hashtag {
-            color: var(--color-primary);
-            font-weight: 600;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: var(--space-lg);
-            }
-
-            .container {
-                padding: var(--space-lg) var(--space-md);
-            }
-
-            .performer-name {
-                font-size: 38px;
-            }
-
-            .performance-details {
-                flex-direction: column;
-                gap: var(--space-lg);
-            }
-        }
-
-            .container {
-                padding: var(--space-lg) var(--space-md);
-            }
-
-            .performer-name {
-                font-size: 38px;
-            }
-
-            .performance-details {
-                flex-direction: column;
-                gap: var(--space-lg);
-            }
-
-            
-        }
-
-        /* Show Order Table */
-        .show-order-table {
-            border: 1px solid var(--color-border);
-            border-radius: 4px;
-            overflow: hidden;
-            font-size: 13px;
-            width: 100%;
-            table-layout: fixed;
-        }
-        .show-order-row {
-            display: flex;
-            gap: 0;
-            border-bottom: 1px solid var(--color-border);
-        }
-        .show-order-row:last-child { border-bottom: none; }
-        .show-order-header {
-            background: var(--color-primary);
-            color: #fff;
-            font-weight: 700;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-        .show-order-finale {
-            background: #FFF8F5;
-            font-weight: 600;
-        }
-        .show-col-num {
-            width: 40px;
-            min-width: 40px;
-            padding: 10px 12px;
-            border-right: 1px solid var(--color-border);
-            text-align: center;
-            font-weight: 700;
-            color: var(--color-primary);
-        }
-        .show-order-header .show-col-num { color: #fff; border-right-color: rgba(255,255,255,0.2); }
-        .show-col-act {
-            flex: 1;
-            padding: 10px 14px;
-            border-right: 1px solid var(--color-border);
-            line-height: 1.5;
-        }
-        .show-order-header .show-col-act { border-right-color: rgba(255,255,255,0.2); }
-        .show-col-style {
-            width: 130px;
-            min-width: 130px;
-            padding: 10px 12px;
-            color: #666;
-            font-size: 13px;
-        }
-        .show-order-header .show-col-style { color: #fff; }
-        .show-note {
-            font-size: 12px;
-            color: #888;
-            display: block;
-        }
-        .show-tbd {
-            font-size: 11px;
-            background: #FFF3CD;
-            color: #856404;
-            padding: 1px 6px;
-            border-radius: 3px;
-            font-weight: 600;
-            margin-left: 4px;
-        }
-
-        /* ── TAB NAVIGATION ─────────────────────────────────── */
-        .tab-nav {
-            display: flex;
-            gap: 0;
-            border-bottom: 2px solid var(--color-border);
-            margin: var(--space-xl) calc(-1 * var(--space-2xl)) var(--space-2xl);
-            padding: 0 var(--space-2xl);
-            overflow-x: auto;
-            scrollbar-width: none;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif; line-height: 1.6; color: var(--color-text); background: var(--color-light); padding: var(--space-2xl) var(--space-lg); }
+        .container { max-width: 700px; margin: 0 auto; background: #fff; padding: var(--space-3xl) var(--space-2xl); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+        .header { border-bottom: 3px solid var(--color-primary); padding-bottom: var(--space-xl); margin-bottom: var(--space-2xl); }
+        .performer-name { font-size: 54px; font-weight: 800; letter-spacing: -0.025em; line-height: 1.05; margin-bottom: var(--space-lg); }
+        .performance-details { display: flex; gap: var(--space-xl); font-size: 14px; color: #666; flex-wrap: wrap; }
+        .detail-item { flex: 1; min-width: 120px; }
+        .detail-label { color: var(--color-primary); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+        .detail-value { color: var(--color-text); font-size: 15px; font-weight: 600; line-height: 1.3; }
+        .tab-nav { display: flex; gap: 0; border-bottom: 2px solid var(--color-border); margin: var(--space-xl) calc(-1 * var(--space-2xl)) var(--space-2xl); padding: 0 var(--space-2xl); overflow-x: auto; scrollbar-width: none; }
         .tab-nav::-webkit-scrollbar { display: none; }
-        .tab-btn {
-            background: none;
-            border: none;
-            padding: 12px 18px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            color: #aaa;
-            cursor: pointer;
-            border-bottom: 2.5px solid transparent;
-            margin-bottom: -2px;
-            white-space: nowrap;
-            transition: color .15s, border-color .15s;
-            letter-spacing: 0.02em;
-        }
-        .tab-btn:hover  { color: var(--color-text); border-bottom-color: var(--color-border); }
+        .tab-btn { background: none; border: none; padding: 12px 18px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif; font-size: 13px; font-weight: 600; color: #aaa; cursor: pointer; border-bottom: 2.5px solid transparent; margin-bottom: -2px; white-space: nowrap; transition: color .15s, border-color .15s; letter-spacing: 0.02em; }
+        .tab-btn:hover { color: var(--color-text); border-bottom-color: var(--color-border); }
         .tab-btn.active { color: var(--color-primary); border-bottom-color: var(--color-primary); }
         .tab-panel { display: none; }
         .tab-panel.active { display: block; }
-
-
-        /* ── BIOGRAPHY BLOCK ─────────────────────────────────── */
-        .intro-sublabel {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--color-primary);
-            margin-bottom: 10px;
-            margin-top: var(--space-xl);
+        .section { margin-bottom: var(--space-3xl); }
+        .section-title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: var(--space-lg); padding-bottom: var(--space-md); border-bottom: 1px solid var(--color-border); color: var(--color-dark); }
+        .section-content { font-size: 15px; line-height: 1.8; color: var(--color-text); }
+        .info-row { display: flex; gap: var(--space-lg); margin-bottom: var(--space-lg); }
+        .info-label { min-width: 140px; font-weight: 700; color: var(--color-primary); text-transform: uppercase; font-size: 11px; letter-spacing: 0.07em; padding-top: 2px; }
+        .info-content { flex: 1; }
+        .highlight { background: #FFF5F5; border-left: 4px solid var(--color-primary); padding: var(--space-lg); margin: var(--space-xl) 0; border-radius: 2px; font-size: 14px; line-height: 1.7; }
+        .notice { background: #FFFBF0; border-left: 4px solid #C4841A; padding: var(--space-lg); margin: var(--space-xl) 0; border-radius: 2px; font-size: 14px; line-height: 1.7; }
+        .info-box { background: #F0F8FF; border-left: 4px solid #4A90D9; padding: var(--space-lg); margin: var(--space-xl) 0; border-radius: 2px; font-size: 14px; line-height: 1.7; }
+        .voiceover { background: #F0F8FF; padding: var(--space-lg); border-radius: 2px; margin-bottom: var(--space-xl); font-style: italic; line-height: 1.8; }
+        .intro-sublabel { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-primary); margin-bottom: 10px; margin-top: var(--space-xl); }
+        .bio-block { font-size: 15px; line-height: 1.8; color: var(--color-text); padding: 20px 24px; background: #FAFAF9; border-radius: 4px; border: 1px solid var(--color-border); white-space: pre-line; }
+        .show-order-table { border: 1px solid var(--color-border); border-radius: 4px; overflow: hidden; font-size: 13px; width: 100%; }
+        .show-order-row { display: flex; border-bottom: 1px solid var(--color-border); }
+        .show-order-row:last-child { border-bottom: none; }
+        .show-order-header { background: var(--color-primary); color: #fff; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+        .show-col-num { width: 40px; min-width: 40px; padding: 10px 12px; border-right: 1px solid var(--color-border); text-align: center; font-weight: 700; color: var(--color-primary); }
+        .show-order-header .show-col-num { color: #fff; border-right-color: rgba(255,255,255,0.2); }
+        .show-col-act { flex: 1; padding: 10px 14px; border-right: 1px solid var(--color-border); line-height: 1.5; }
+        .show-order-header .show-col-act { border-right-color: rgba(255,255,255,0.2); }
+        .show-col-style { width: 130px; min-width: 130px; padding: 10px 12px; color: #666; font-size: 13px; }
+        .show-order-header .show-col-style { color: #fff; }
+        .show-tbd { font-size: 11px; background: #FFF3CD; color: #856404; padding: 1px 6px; border-radius: 3px; font-weight: 600; }
+        .social { display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-sm); font-size: 14px; }
+        .hashtag { color: var(--color-primary); font-weight: 600; }
+        .footer { margin-top: var(--space-3xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border); font-size: 13px; color: #888; }
+        @media (max-width: 600px) {
+            body { padding: var(--space-lg); }
+            .container { padding: var(--space-lg) var(--space-md); }
+            .performer-name { font-size: 38px; }
+            .performance-details { flex-direction: column; gap: var(--space-lg); }
+            .info-row { flex-direction: column; gap: var(--space-xs); }
+            .info-label { min-width: unset; }
+            .show-col-style { display: none; }
         }
-        .bio-block {
-            font-size: 15px;
-            line-height: 1.8;
-            color: var(--color-text);
-            padding: 20px 24px;
-            background: #FAFAF9;
-            border-radius: 4px;
-            border: 1px solid var(--color-border);
-            white-space: pre-line;
-        }
-        .showcase-yes {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #1a6e42;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        .showcase-no {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: #888;
-            font-size: 14px;
-        }
-</style>
+    </style>
 </head>
 <body>
+<div class="container">
 
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="performer-name">Nikta Jaamei</h1>
-            <div class="performance-details">
-                <div class="detail-item">
-                    <div class="detail-label">Dance Style</div>
-                    <div class="detail-value">Kathak</div>
+    <div class="header">
+        <h1 class="performer-name">Nikta Jaamei</h1>
+        <div class="performance-details">
+            <div class="detail-item">
+                <div class="detail-label">Dance Style</div>
+                <div class="detail-value">Kathak</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Performance Time</div>
+                <div class="detail-value">21:00 Block</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Date</div>
+                <div class="detail-value">Friday 1 May</div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Location</div>
+                <div class="detail-value">Shoonya Dance Centre</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="tab-nav">
+        <button class="tab-btn active" onclick="showTab(this,'tab-performance')">Your Performance</button>
+        <button class="tab-btn"        onclick="showTab(this,'tab-friday')">Friday Programme</button>
+        <button class="tab-btn" onclick="showTab(this,'tab-showcase')">Gala Showcase</button>
+        <button class="tab-btn"        onclick="showTab(this,'tab-logistics')">Venue &amp; Logistics</button>
+    </nav>
+
+    <!-- ═══ TAB 1: YOUR PERFORMANCE ═══ -->
+    <div class="tab-panel active" id="tab-performance">
+
+        <div class="section">
+            <h2 class="section-title">Your Introduction</h2>
+            <div class="voiceover">Kathak dancer Nikta Jaamei showcases the rhythmic complexity and lyrical movement vocabulary of this North Indian classical tradition, blending virtuosic footwork with expressive gestures that bring ancient stories to life.</div>
+            <div class="intro-sublabel">About you</div>
+            <div class="bio-block">Nikmyu is a Swiss dancer of Persian origins who loves to explore the diversity of Indian dances. She has been training in Bollywood, Kathak, Bhangra and Indian street classical fusion.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Your Materials &amp; Updates</h2>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">Your Folder</div>
+                    <div class="info-content">
+                        <a href="https://drive.google.com/drive/folders/1AYpUN5aTSkUzOnVZXD8uO81PYqK-WH3g?usp=share_link" target="_blank" style="color: var(--color-primary); font-weight: 600; text-decoration: none;">Open your performer folder →</a><br>
+                        <span style="font-size:13px;color:#888;">All your documents and performance materials are here.</span>
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <div class="detail-label">Performance Time</div>
-                    <div class="detail-value">21:00 Block</div>
+                <div class="info-row">
+                    <div class="info-label">Backing Track</div>
+                    <div class="info-content">
+                        Upload your backing track directly to your folder — no need to email it.<br>
+                        <span style="font-size:13px;color:#888;">Format: MP3 or WAV &nbsp;·&nbsp; Name the file clearly (e.g. <em>FirstName_Title.mp3</em>)</span>
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <div class="detail-label">Date</div>
-                    <div class="detail-value">Friday 1 May</div>
+                <div class="info-row">
+                    <div class="info-label">Deadline</div>
+                    <div class="info-content">
+                        <strong>25 April</strong> — no changes accepted after this date. If something urgent comes up after 25 April, contact Swapnil directly.
+                    </div>
                 </div>
-            
-                <div class="detail-item">
-                    <div class="detail-label">Location</div>
-                    <div class="detail-value">Shoonya Dance Centre</div>
+            </div>
+            <div class="highlight">
+                <strong>⚠ No individual sound check.</strong> Your track will be played exactly as uploaded. Please listen back to it before uploading — check the volume, the start point, and that it is the correct final version.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Saturday Showcase</h2>
+            <div class="section-content">
+                <p><strong>You indicated you would like to be considered for Saturday Showcase selection.</strong> Up to 3 performers will be selected on Friday evening based on Opening Party performances. You will be notified the same night.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Share Your Performance</h2>
+            <div class="section-content">
+                <p>Help us celebrate! Tag us in your posts:</p>
+                <div class="social">
+                    <span class="hashtag">#gidf2026</span>
+                    <span>@gentindiadansfestival</span>
+                    <span>@shoonyadance</span>
+                    <span>@abollywoodcompany</span>
                 </div>
             </div>
         </div>
-        <nav class="tab-nav">
-            <button class="tab-btn active"  onclick="showTab(this,'tab-performance')">Your Performance</button>
-            <button class="tab-btn"         onclick="showTab(this,'tab-friday')">Friday Programme</button>
-            <button class="tab-btn"         onclick="showTab(this,'tab-showcase')">Gala Showcase</button>
-            <button class="tab-btn"         onclick="showTab(this,'tab-logistics')">Venue &amp; Logistics</button>
-        </nav>
-        
-        <div class="tab-panel active" id="tab-performance">
-            <div class="section">
-                <h2 class="section-title">Your Introduction</h2>
-                <div class="voiceover">
-                    Kathak dancer Nikta Jaamei showcases the rhythmic complexity and lyrical movement vocabulary of this North Indian classical tradition, blending virtuosic footwork with expressive gestures that bring ancient stories to life.
+
+    </div><!-- /tab-performance -->
+
+    <!-- ═══ TAB 2: FRIDAY PROGRAMME ═══ -->
+    <div class="tab-panel" id="tab-friday">
+
+        <div class="section">
+            <h2 class="section-title">On the Night — What to Expect</h2>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">Arrival</div>
+                    <div class="info-content">Arrive by <strong>19:30</strong> — register at the desk, collect your wristband, and you'll be shown to the changing room.</div>
                 </div>
-        <div class="intro-sublabel">About you</div>
-                <div class="bio-block">Nikmyu is a Swiss dancer of Persian origins who loves to explore the diversity of Indian dances. She has been training in Bollywood, Kathak, Bhangra and Indian street classical fusion.</div>
+                <div class="info-row">
+                    <div class="info-label">Changing Room</div>
+                    <div class="info-content">1st Floor, behind the backdrop. One drink coupon will be waiting for you there.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Costume</div>
+                    <div class="info-content">Bring your costume ready to change into. Keep hair and makeup simple — you have a whole evening to enjoy after your performance. If you're selected for the Saturday Showcase, that's when you go all out.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Before You Go On</div>
+                    <div class="info-content">You are <strong>5th in Block 1</strong>. You will be called backstage approximately 10 minutes before your block starts. Please be in the changing room and ready by then — do not wander far.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">On Stage</div>
+                    <div class="info-content">You will be introduced by a pre-recorded voiceover (the text on your page). Your track starts automatically after the introduction. There is no individual sound check — make sure your track is correctly uploaded before 25 April.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">After Performance</div>
+                    <div class="info-content">Head back to the changing room to change, then join the party as a guest for the rest of the evening.</div>
+                </div>
             </div>
-            <div class="section">
-                <h2 class="section-title">Saturday Showcase</h2>
-                <div class="section-content">
-                    <p><strong>You indicated you would like to be considered for Saturday Showcase selection.</strong> Up to 3 performers will be selected on Friday evening based on Opening Party performances.</p>
-                </div>
-            </div>
-            <div class="section">
-                <h2 class="section-title">Your Materials &amp; Updates</h2>
-                <div class="section-content">
-                    <div class="info-row">
-                        <div class="info-label">Folder</div>
-                        <div class="info-content">
-                            <a href="https://drive.google.com/drive/folders/1AYpUN5aTSkUzOnVZXD8uO81PYqK-WH3g?usp=share_link" target="_blank" style="color: var(--color-primary); font-weight: 600; text-decoration: none;">Access your performer folder</a>
-                        </div>
-                    </div>
-            <div class="section">
-                <h2 class="section-title">Share Your Performance</h2>
-                <div class="section-content">
-                    <p>Help us celebrate! Tag us in your posts:</p>
-                    <div class="social">
-                        <span class="hashtag">#gidf2026</span>
-                        <span>@gentindiadansfestival</span>
-                        <span>@shoonyadance</span>
-                        <span>@abollywoodcompany</span>
-                    </div>
-                </div>
-            <div class="section">
-                <h2 class="section-title">Saturday 2 May — Tech Rehearsal &amp; Showcase</h2>
-                <div class="section-content">
-                    <div class="info-row">
-                        <div class="info-label">15:00</div>
-                        <div class="info-content"><strong>Changing Room Opens</strong></div>
-                    </div>
         </div>
 
-        <div class="tab-panel" id="tab-friday">
-                        <div class="section">
-                <h2 class="section-title">What to Expect</h2>
-                <div class="section-content">
-                    <div class="info-row">
-                        <div class="info-label">Arrival</div>
-                        <div class="info-content">Report at the registration desk on arrival. You will receive your wristband and be directed to the changing room.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Changing Room</div>
-                        <div class="info-content">1st Floor, behind the backdrop. We will guide you to it.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Refreshment</div>
-                        <div class="info-content">One drink coupon provided per performer.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">Costume</div>
-                        <div class="info-content">Bring your performance costume. For the Opening Party, keep your hair and makeup simple — there's a full evening to enjoy and you don't want to spend it getting ready. If you're selected for the Saturday Showcase, that's when you go all out.</div>
-                    </div>
+        <div class="section">
+            <h2 class="section-title">Friday 1 May — Full Schedule</h2>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">11:30</div>
+                    <div class="info-content"><strong>Arrival &amp; Registration</strong><br>Come when suits you.</div>
                 </div>
-            </div>
-            <div class="section">
-                <h2 class="section-title">Friday 1 May Schedule</h2>
-                <div class="section-content">
-                    <div class="info-row">
-                        <div class="info-label">11:30</div>
-                        <div class="info-content"><strong>Arrival &amp; Registration</strong><br>Registration opens. Come when suits you — there's no fixed arrival time unless you're joining the Technique &amp; Tools Lab.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">12:00–16:00</div>
-                        <div class="info-content"><strong>Technique &amp; Tools Lab</strong><br>Pushing the Boundaries of Rajasthani Folk with Colleena Shakti. <em>Separate booking — not included in any day / full festival pass.</em></div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">16:30–17:00</div>
-                        <div class="info-content"><strong>Spill the Chai</strong><br>Tea break.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">17:00–18:30</div>
-                        <div class="info-content"><strong>Bollywood Folk Fusion</strong><br>Workshop with Vaishali Sagar.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">18:30–20:00</div>
-                        <div class="info-content"><strong>Garba Choreography</strong><br>Workshop with Shampa Gopikrishna.</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">20:00–21:00</div>
-                        <div class="info-content"><strong>Kalbeliya — Costume Workshop &amp; Community Class</strong><br>with Swapnil Dagliya</div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">21:00</div>
-                        <div class="info-content">
-                            <strong>Block 1 — Opening Party Performers</strong><br>
-                            Five acts, one after the other with no break, in this order:
-                            <ol style="margin: 8px 0 0 18px; padding: 0; line-height: 2;">
-                                <li>Shilpa Joy</li>
+                <div class="info-row">
+                    <div class="info-label">12:00–16:00</div>
+                    <div class="info-content"><strong>Technique &amp; Tools Lab</strong><br>Pushing the Boundaries of Rajasthani Folk with Colleena Shakti. <em>Separate booking.</em></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">16:30–17:00</div>
+                    <div class="info-content"><strong>Spill the Chai</strong> — Tea break.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">17:00–18:30</div>
+                    <div class="info-content"><strong>Bollywood Folk Fusion</strong> — Workshop with Vaishali Sagar.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">18:30–20:00</div>
+                    <div class="info-content"><strong>Garba Choreography</strong> — Workshop with Shampa Gopikrishna.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">19:30</div>
+                    <div class="info-content"><strong>Performers arrive</strong> — Registration &amp; changing room.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">20:00–21:00</div>
+                    <div class="info-content"><strong>Kalbeliya — Community Class</strong> with Swapnil Dagliya. Included with Opening Party ticket.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">21:00</div>
+                    <div class="info-content">
+                        <strong>Block 1 — Performances</strong>
+                        <ol style="margin: 8px 0 0 18px; padding: 0; line-height: 2;">
+                            <li>Shilpa Joy</li>
                                 <li>Dounia &amp; Elsa</li>
                                 <li>Aniqa Nawar</li>
                                 <li>Kiran Maya Priya Barua</li>
-                                <li>Nikta Jaamei</li>
-                            </ol>
-                        </div>
+                                <li><strong>Nikta Jaamei ← you</strong></li>
+                        </ol>
                     </div>
-                    <div class="info-row schedule-highlight">
-                        <div class="info-label">21:15–21:45</div>
-                        <div class="info-content"><strong>Dariya Live Band — Set 1</strong></div>
-                    </div>
-                    <div class="info-row">
-                        <div class="info-label">21:45</div>
-                        <div class="info-content">
-                            <strong>Block 2 — Opening Party Performers</strong><br>
-                            Five acts, one after the other with no break, in this order:
-                            <ol style="margin: 8px 0 0 18px; padding: 0; line-height: 2;">
-                                <li>Srimahavalli Thiyagarajan</li>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">21:15–21:45</div>
+                    <div class="info-content"><strong>Dariya Live Band — Set 1</strong></div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">21:45</div>
+                    <div class="info-content">
+                        <strong>Block 2 — Performances</strong>
+                        <ol style="margin: 8px 0 0 18px; padding: 0; line-height: 2;">
+                            <li>Srimahavalli Thiyagarajan</li>
                                 <li>Silva Basu</li>
                                 <li>Akshaya Sundar</li>
                                 <li>Divina Anil</li>
                                 <li>Bollybandits</li>
-                            </ol>
-                        </div>
+                        </ol>
                     </div>
-                    <div class="info-row">
-                        <div class="info-label">22:00+</div>
-                        <div class="info-content"><strong>Live DJ with Swapnil (@swapkebolly)</strong><br>Bollywood and Desi beats — dance continues.</div>
-                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">22:00+</div>
+                    <div class="info-content"><strong>Live DJ with Swapnil (@swapkebolly)</strong><br>Bollywood and Desi beats — dance the rest of the evening.</div>
+                </div>
+            </div>
         </div>
 
+    </div><!-- /tab-friday -->
+
+    <!-- ═══ TAB 3: GALA SHOWCASE (if applicable) ═══ -->
         <div class="tab-panel" id="tab-showcase">
-            <div class="section">
+        <div class="section">
+            <h2 class="section-title">Saturday Showcase Selection</h2>
+            <div class="section-content">
+                <p>Up to 3 Opening Party performers will be invited to perform a solo in the Saturday Gala Showcase. Selection is made by Swapnil on Friday evening after all performances. You will be notified the same night.</p>
+            </div>
+            <div class="notice" style="margin-top: 20px;">
+                If selected, the Saturday Showcase is your moment to go all out — full costume, full hair, full makeup. The Changing Room opens at 15:00 on Saturday.
+            </div>
+        </div>
+        <div class="section">
             <h2 class="section-title">Complete Show Order</h2>
             <div class="section-content">
-                <p style="margin-bottom: 16px; color: #666; font-size: 14px;">
-                    Saturday 2 May 2026 &mdash; Doors open 20:00 &mdash; Show begins 20:30
-                </p>
+                <p style="margin-bottom: 16px; color: #666; font-size: 14px;">Saturday 2 May 2026 — Doors open 20:00 — Show begins 20:30</p>
                 <div class="show-order-table">
                     <div class="show-order-row show-order-header">
                         <div class="show-col-num">#</div>
                         <div class="show-col-act">Act</div>
                         <div class="show-col-style">Style</div>
                     </div>
-        </div>
 
-        <div class="tab-panel" id="tab-logistics">
-            <div class="section">
-                <h2 class="section-title">Venue</h2>
-                <div class="section-content">
-                    <div class="info-row">
-                        <div class="info-label">Address</div>
-                        <div class="info-content">
-                            Shoonya Dance Centre<br>
-                            Stapelplein 41<br>
-                            9000 Gent, Belgium
-                        </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">1</div>
+                        <div class="show-col-act">Bollywood 2 — Morya Re<br><span style="font-size:12px;color:#888;">ABC Company · Curtain opens with music · Swapnil welcomes live after</span></div>
+                        <div class="show-col-style">Bollywood</div>
                     </div>
-            <div class="section">
-                <h2 class="section-title">Getting There</h2>
-                <div class="section-content">
-                    <div class="info-row">
-                        <div class="info-label">By Bus</div>
-                        <div class="info-content">Lines 5 and 8 pass directly in front</div>
+                    <div class="show-order-row" style="background:#FFF5F7;">
+                        <div class="show-col-num">2</div>
+                        <div class="show-col-act">Opening Party Performer <span class="show-tbd">TBD</span><br><span style="font-size:12px;color:#888;">Selected Friday evening</span></div>
+                        <div class="show-col-style">Solo</div>
                     </div>
-            <div class="section">
-                <h2 class="section-title">Bringing Guests?</h2>
-                <div class="section-content">
-                    <p>Anyone joining you must book an Opening Party ticket separately. <a href="https://www.abcbollywoodbelgium.com/the-opening-party" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">Reserve passes here.</a></p>
+                    <div class="show-order-row">
+                        <div class="show-col-num">3</div>
+                        <div class="show-col-act">Desihop</div>
+                        <div class="show-col-style">Group</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">4</div>
+                        <div class="show-col-act">Bollyfolk — Ghoomar<br><span style="font-size:12px;color:#888;">ABC Company · Jalalo Bilalo / Savariya Parnaye</span></div>
+                        <div class="show-col-style">Folk</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">5</div>
+                        <div class="show-col-act">Manasi — Giddha</div>
+                        <div class="show-col-style">Solo</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">6</div>
+                        <div class="show-col-act">Bollyfolk — Tippani<br><span style="font-size:12px;color:#888;">ABC Company · O Re Kanchi</span></div>
+                        <div class="show-col-style">Folk</div>
+                    </div>
+                    <div class="show-order-row" style="background:#FFF5F7;">
+                        <div class="show-col-num">7</div>
+                        <div class="show-col-act">Opening Party Performer <span class="show-tbd">TBD</span><br><span style="font-size:12px;color:#888;">Selected Friday evening</span></div>
+                        <div class="show-col-style">Solo</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">8</div>
+                        <div class="show-col-act">ABC — Choli Ke Peeche</div>
+                        <div class="show-col-style">Bollywood</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">9</div>
+                        <div class="show-col-act">Bhangra<br><span style="font-size:12px;color:#888;">Insane Bhangra Mashup / Tere Long Da</span></div>
+                        <div class="show-col-style">Bhangra</div>
+                    </div>
+                    <div class="show-order-row" style="background:#FFF5F7;">
+                        <div class="show-col-num">10</div>
+                        <div class="show-col-act">Opening Party Performer <span class="show-tbd">TBD</span><br><span style="font-size:12px;color:#888;">Selected Friday evening</span></div>
+                        <div class="show-col-style">Solo</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">11</div>
+                        <div class="show-col-act">Shampa Gopikrishna ★</div>
+                        <div class="show-col-style">Solo</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">12</div>
+                        <div class="show-col-act">Semi-Classical<br><span style="font-size:12px;color:#888;">Toda &amp; Kavitt / Saiyaara Reprise</span></div>
+                        <div class="show-col-style">Semi-classical</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">13</div>
+                        <div class="show-col-act">Vaishali Sagar ★</div>
+                        <div class="show-col-style">Solo</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">14</div>
+                        <div class="show-col-act">ABC — Ghar More Pardesiya</div>
+                        <div class="show-col-style">Bollywood</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">15</div>
+                        <div class="show-col-act">Colleena Shakti ★<br><span style="font-size:12px;color:#888;">Rajasthani Folk</span></div>
+                        <div class="show-col-style">Rajasthani</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">16</div>
+                        <div class="show-col-act">Swapnil Dagliya — Kalbeliya</div>
+                        <div class="show-col-style">Solo</div>
+                    </div>
+                    <div class="show-order-row">
+                        <div class="show-col-num">17</div>
+                        <div class="show-col-act">Madhuri Dixit Medley<br><span style="font-size:12px;color:#888;">ABC Company</span></div>
+                        <div class="show-col-style">Bollywood</div>
+                    </div>
+                    <div class="show-order-row" style="background:#FFF8F0; font-weight:600;">
+                        <div class="show-col-num">18</div>
+                        <div class="show-col-act">Grand Finale — Everyone</div>
+                        <div class="show-col-style">Finale</div>
+                    </div>
+                </div>
+                <p style="margin-top:12px; font-size:12px; color:#888;">★ Guest teacher · Show duration approx. 90 min</p>
+            </div>
+        </div>
+    </div><!-- /tab-showcase -->
+
+    <!-- ═══ TAB 4: VENUE & LOGISTICS ═══ -->
+    <div class="tab-panel" id="tab-logistics">
+
+        <div class="section">
+            <h2 class="section-title">Venue</h2>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">Address</div>
+                    <div class="info-content">Shoonya Dance Centre<br>Stapelplein 41<br>9000 Gent, Belgium</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Performance Space</div>
+                    <div class="info-content">Studio Ananta — Ground Floor</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Changing Room</div>
+                    <div class="info-content">1st Floor, behind the backdrop</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Contact</div>
+                    <div class="info-content">info@shoonyadance.com</div>
                 </div>
             </div>
         </div>
-        
 
-        <!-- Footer -->
-        <div class="footer">
-            <p><strong>GIDF Opening Party</strong></p>
-            <p style="margin-top: var(--space-md);">Friday 1 May 2026 | Studio Ananta, Shoonya Dance Centre | Gent, Belgium</p>
+        <div class="section">
+            <h2 class="section-title">Getting There</h2>
+            <div class="section-content">
+                <div class="info-row">
+                    <div class="info-label">By Bus</div>
+                    <div class="info-content">Lines 5 and 8 stop directly in front of Stapelplein.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">By Train</div>
+                    <div class="info-content">Gent-Dampoort Station (700m, 10-min walk) or Tram 4 to Sleepstraat.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">By Bike</div>
+                    <div class="info-content">Ample bike parking on Stapelplein square.</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">By Car</div>
+                    <div class="info-content">Parking Tolhuis (2 min walk) or Parking Sint-Michiels (5 min walk). Street parking paid until 23:00.</div>
+                </div>
+            </div>
         </div>
+
+        <div class="section">
+            <h2 class="section-title">Bringing Guests?</h2>
+            <div class="section-content">
+                <p>Anyone joining you for the evening must book an Opening Party ticket separately.</p>
+                <p style="margin-top: 12px;"><a href="https://www.abcbollywoodbelgium.com/the-opening-party" target="_blank" style="color: var(--color-primary); text-decoration: none; font-weight: 600;">Reserve passes → abcbollywoodbelgium.com</a></p>
+            </div>
+        </div>
+
+    </div><!-- /tab-logistics -->
+
+    <div class="footer">
+        <p><strong>GIDF Opening Party — Friday 1 May 2026</strong></p>
+        <p style="margin-top: 8px;">Studio Ananta · Shoonya Dance Centre · Stapelplein 41 · 9000 Gent</p>
     </div>
 
-    
-    <script>
-        function showTab(btn, id) {
-            document.querySelectorAll('.tab-btn').forEach(function(b)  { b.classList.remove('active'); });
-            document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
-            btn.classList.add('active');
-            document.getElementById(id).classList.add('active');
-        }
-    </script>
+</div><!-- /container -->
+<script>
+    function showTab(btn, id) {
+        document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        document.getElementById(id).classList.add('active');
+    }
+</script>
 </body>
 </html>
